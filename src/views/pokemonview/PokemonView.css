@@ -1,0 +1,38 @@
+div.pokemon-container {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.loading {
+  cursor: progress;
+}
+
+img.whos-that-pokemon {
+  margin-top: 3vh;
+  border-radius: 50%;
+  max-width: 128px;
+  box-shadow: 0vw 0vw 5vw var(--main-font-color);
+
+  cursor: pointer;
+}
+
+img.loading {
+  width: 96px;
+}
+
+h1.answer-correct {
+  color: var(--score-correct-font-color);
+}
+
+h1.answer-not-correct {
+  color: var(--score-incorrect-font-color);
+}
+
+h4.pokemon-ability-effect {
+  max-width: 512px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 4px;
+  text-align: left;
+}

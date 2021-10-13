@@ -1,0 +1,53 @@
+div.score-container {
+  display: grid;
+  grid-template: 
+    "score-header score-header score-header"
+    "correct . score-correct"
+    "incorrect . score-incorrect"
+    "revealed . score-revealed";
+
+  border-radius: 8px;
+  margin: 32px;
+  text-align: center;
+  justify-self: center;
+  
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 128px;
+}
+
+.score-header {
+  grid-area: score-header;
+}
+
+.correct {
+  text-align: right;
+  grid-area: correct;
+}
+
+.incorrect {
+  text-align: right;
+  grid-area: incorrect;
+}
+
+.revealed {
+  text-align: right;
+  grid-area: revealed;
+}
+
+.score-correct {
+  text-align: left;
+  grid-area: score-correct;
+  color: var(--score-correct-font-color);
+}
+
+.score-incorrect {
+  text-align: left;
+  grid-area: score-incorrect;
+  color: var(--score-incorrect-font-color);
+}
+
+.score-revealed {
+  text-align: left;
+  grid-area: score-revealed;
+  color: var(--score-neutral-font-color);
+}
