@@ -22,6 +22,7 @@ const getAllPokemon = () => {
   return PokeAPI.get(`pokemon/?limit=${count}`)
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   getAllPokemon,
   getAbility,

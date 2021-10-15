@@ -31,6 +31,7 @@ export const PokemonView = () => {
     location.state.answer === pokemon?.name ? setIsCorrectAnswer(true) : setIsCorrectAnswer(false)
     fetchAbilities()
     updateScore()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const fetchAbility = async (name) => {
