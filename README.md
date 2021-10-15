@@ -1,4 +1,4 @@
-## Projekt
+## Project
 https://vadheterpokemonen.netlify.app/pokemon
 
 # Who's that Pokémon?
@@ -9,7 +9,7 @@ Can you name the mysterious Pokémon?
 - npm install
 - npm start
 
-## Projekt Plan: 
+## Project Plan: 
 https://docs.google.com/document/d/18fHSAUkBVAQ-_ONjuOoWErMAN7yy5pEphFoNRzlSGvk/edit?usp=sharing
 
 ## Presentation:
