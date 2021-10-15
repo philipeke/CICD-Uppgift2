@@ -8,3 +8,6 @@ Can you name the mysterious Pokémon?
 
 ## Projekt Plan: 
 https://docs.google.com/document/d/18fHSAUkBVAQ-_ONjuOoWErMAN7yy5pEphFoNRzlSGvk/edit?usp=sharing
+
+## Presentation:
+https://docs.google.com/presentation/d/102xgu7rwRrA7F__cGNIEfcrgV6Ye2wSNvZbzU0XQb9s/edit?usp=sharing
