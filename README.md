@@ -5,3 +5,6 @@ Can you name the mysterious Pokémon?
 - cd project-folder-name
 - npm install
 - npm start
+
+## Projekt Plan: 
+https://docs.google.com/document/d/18fHSAUkBVAQ-_ONjuOoWErMAN7yy5pEphFoNRzlSGvk/edit?usp=sharing
