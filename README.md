@@ -1,4 +1,4 @@
-## Project
+## Site
 https://vadheterpokemonen.netlify.app/pokemon
 
 # Who's that Pokémon?
