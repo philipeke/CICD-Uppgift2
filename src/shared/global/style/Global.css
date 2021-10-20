@@ -4,6 +4,7 @@
   --score-correct-font-color: lightgreen;
   --score-neutral-font-color: lightyellow;
   --score-incorrect-font-color: lightpink;
+  --score-streak-font-color: red;
 }
 
 * {
