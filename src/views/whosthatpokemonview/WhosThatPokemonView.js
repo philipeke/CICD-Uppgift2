@@ -5,10 +5,11 @@ import RoutingPaths from '../../routes/RoutingPaths'
 import PokeAPIService from '../../shared/api/service/PokeAPIService'
 import { PokemonContext } from './../../shared/provider/PokemonProvider'
 import { ScoreBoard } from '../../components/scoreboard/ScoreBoard'
-
 import WhosThatPokemonImg from '../../shared/resources/images/whos-that-pokemon.bmp'
 import PokeballImg from '../../shared/resources/images/pokeball.png'
 import NumberUtils from '../../utils/NumberUtils'
+
+import {ThemeSwitch} from '../../components/themeSwitch/ThemeSwitch'
 
 export const WhosThatPokemonView = () => {
   const history = useHistory()
@@ -43,6 +44,7 @@ export const WhosThatPokemonView = () => {
     <div className='whos-that-pokemon-container'>
       {/* TODO countdown timer before skip answer and view pokemon? */}
       <div className='secret-pokemon'>
+        <ThemeSwitch/>
         <img 
           className='who-is-it' 
           src={WhosThatPokemonImg} 
