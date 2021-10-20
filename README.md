@@ -1,5 +1,5 @@
 ## Site
-https://vadheterpokemonen.netlify.app/pokemon
+https://vadheterpokemonen.netlify.app
 
 # Who's that Pokémon?
 Can you name the mysterious Pokémon?
