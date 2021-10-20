@@ -6,6 +6,7 @@ const capitalizeName = (str) => {
   return split.map(str => str.charAt(0).toUpperCase() + str.slice(1))
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   capitalizeName,
 }
