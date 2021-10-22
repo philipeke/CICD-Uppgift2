@@ -63,11 +63,11 @@ export const WhosThatPokemonView = () => {
         <form onSubmit={() => revealPokemon()}>
           <h5>WHO&apos;S THAT POKEMON?</h5>
           <input 
-            className='answer' 
+            className='answer input' 
             placeholder='It&apos;s...' 
             onChange={(event) => setAnswer(event.target.value.toLowerCase())}></input>
           <input 
-            className='submit' 
+            className='submit input' 
             type='submit' 
             value='Reveal'/>
         </form>

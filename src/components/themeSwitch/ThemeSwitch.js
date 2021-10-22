@@ -8,6 +8,8 @@ export const ThemeSwitch = () => {
 	const [buttonText, setButtonText] = useState(theme)
 
 	const switchTheme = () => {
+		var element = document.body;
+		element.classList.toggle("dark-mode")
 		if(theme == themeEnum.LIGHT){
 			setTheme(themeEnum.DARK)
 			setButtonText (themeEnum.LIGHT)
@@ -19,6 +21,6 @@ export const ThemeSwitch = () => {
 	}
 
 	return (
-		<button onClick={() => switchTheme()}>{buttonText}</button>
+		<button className= "theme-button input" onClick={() => switchTheme()}>{buttonText} Theme</button>
 	)
 }

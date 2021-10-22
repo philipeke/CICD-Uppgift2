@@ -1,6 +1,6 @@
 export const themes = {
-	DARK: "dark",
-	LIGHT: "light",
+	DARK: "Dark",
+	LIGHT: "Light",
 }
 
 export default themes
