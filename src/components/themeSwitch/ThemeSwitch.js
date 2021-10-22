@@ -10,7 +10,7 @@ export const ThemeSwitch = () => {
 	const switchTheme = () => {
 		var element = document.body;
 		element.classList.toggle("dark-mode")
-		if(theme == themeEnum.LIGHT){
+		if(theme === themeEnum.LIGHT){
 			setTheme(themeEnum.DARK)
 			setButtonText (themeEnum.LIGHT)
 		}
