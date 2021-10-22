@@ -11,9 +11,14 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+body{
   background-color: var(--main-bg-color);
   color: var(--main-font-color);
+}
+
+.dark-mode{
+  background-color: black;
+  color: white;
 }
 
 h1 {
@@ -27,4 +32,13 @@ h2 {
 
 h3 {
   color: rgb(255, 101, 25);
+}
+
+.input{
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px var(--main-font-color);
+  background-color: var(--main-font-color);
+  border: none;
+  padding: 12px;
+  margin: 4px;
 }
