@@ -14,3 +14,10 @@ https://docs.google.com/document/d/18fHSAUkBVAQ-_ONjuOoWErMAN7yy5pEphFoNRzlSGvk/
 
 ## Presentation:
 https://docs.google.com/presentation/d/102xgu7rwRrA7F__cGNIEfcrgV6Ye2wSNvZbzU0XQb9s/edit?usp=sharing
+
+
+## Netlify
+https://app.netlify.com/sites/vadheterpokemonen/overview
+
+## CircleCI
+https://app.circleci.com/pipelines/github/Jockaiii/CICD-Uppgift2
