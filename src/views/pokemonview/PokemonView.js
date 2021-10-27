@@ -21,7 +21,8 @@ export const PokemonView = () => {
   const { 
     correct: [correct, setCorrect], 
     incorrect: [incorrect, setIncorrect], 
-    revealed: [revealed, setRevealed] 
+    revealed: [revealed, setRevealed],
+    streak: [streak, setStreak],
   } = useContext(ScoreContext)
 
   useEffect(() => {
@@ -31,6 +32,7 @@ export const PokemonView = () => {
     location.state.answer === pokemon?.name ? setIsCorrectAnswer(true) : setIsCorrectAnswer(false)
     fetchAbilities()
     updateScore()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const fetchAbility = async (name) => {
@@ -62,9 +64,15 @@ export const PokemonView = () => {
       setRevealed(revealed + 1)
     else
       if (location.state.answer === pokemon?.name)
+      {
         setCorrect(correct + 1)
+        setStreak(streak + 1)
+      }
       else
+      {
         setIncorrect(incorrect + 1)
+        setStreak(0)
+      }
   }
 
   // Displays whether the answer was correct or not. Displays nothing if answer was not attempted. 
