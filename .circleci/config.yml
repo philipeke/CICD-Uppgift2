@@ -7,21 +7,20 @@ workflows:
   matrix-tests:
     jobs:
       - node/test:
+          filters:
+            branches:
+              only:
+                - circle-dev
           version: 13.11.0
-            filters:
-              branches:
-                only:
-                  - circle-dev
       - node/test:
+          filters:
+            branches:
+              only:
+                - circle-dev
           version: 12.16.0
-            filters:
-              branches:
-                only:
-                  - circle-dev
       - node/test:
+          filters:
+            branches:
+              only:
+                - circle-dev
           version: 10.19.0
-            filters:
-              branches:
-                only:
-                  - circle-dev
-                  
