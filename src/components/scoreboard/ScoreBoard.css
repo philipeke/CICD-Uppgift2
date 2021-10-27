@@ -4,7 +4,8 @@ div.score-container {
     "score-header score-header score-header"
     "correct . score-correct"
     "incorrect . score-incorrect"
-    "revealed . score-revealed";
+    "revealed . score-revealed"
+    "streak . score-streak";
 
   border-radius: 8px;
   margin: 32px;
@@ -34,6 +35,11 @@ div.score-container {
   grid-area: revealed;
 }
 
+.streak {
+  text-align: right;
+  grid-area: streak;
+}
+
 .score-correct {
   text-align: left;
   grid-area: score-correct;
@@ -50,4 +56,10 @@ div.score-container {
   text-align: left;
   grid-area: score-revealed;
   color: var(--score-neutral-font-color);
+}
+
+.score-streak {
+  text-align: left;
+  grid-area: score-streak;
+  color: var(--score-streak-font-color);
 }
