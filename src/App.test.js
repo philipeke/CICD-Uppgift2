@@ -12,6 +12,7 @@ test('Reveal Button', () => {
   render(<App />);
   const revealSubmit = screen.getByText('Reveal');
   expect(revealSubmit).toBeInstanceOf(HTMLInputElement);
+  expect(revealSubmit).toHaveAttribute('type', 'submit')
   expect(revealSubmit).toBeInTheDocument();
 });
 
