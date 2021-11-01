@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('WHO\'S THAT POKEMON?', () => {
-  render(<App />);
-  const questionHeading = screen.getByText('WHO\'S THAT POKEMON?');
-  expect(questionHeading).toBeInstanceOf(HTMLHeadingElement);
-  expect(questionHeading).toBeInTheDocument();
-});
+// test('WHO\'S THAT POKEMON?', () => {
+//   render(<App />);
+//   const questionHeading = screen.getByText('WHO\'S THAT POKEMON?');
+//   expect(questionHeading).toBeInstanceOf(HTMLHeadingElement);
+//   expect(questionHeading).toBeInTheDocument();
+// });
 
 test('Reveal Button', () => {
   render(<App />);
