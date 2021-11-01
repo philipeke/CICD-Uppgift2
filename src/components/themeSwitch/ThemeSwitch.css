@@ -3,4 +3,5 @@
 	right: 10px;
 	position: fixed;
 	cursor: pointer;
+	z-index: 11;
 }
