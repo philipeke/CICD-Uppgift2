@@ -61,7 +61,7 @@ export const WhosThatPokemonView = () => {
       </div>
       <div className='input-answer'>
         <form onSubmit={() => revealPokemon()}>
-          <h5>WHO&apos;S THAT POKEMAN?</h5>
+          <h5>WHO&apos;S THAT POKEMON?</h5>
           <input 
             className='answer input' 
             placeholder='It&apos;s...' 
