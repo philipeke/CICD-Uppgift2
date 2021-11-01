@@ -25,7 +25,6 @@ export const WhosThatPokemonView = () => {
       const rnd = NumberUtils.getRandomIntFromZeroTo(max)
   
       const randomPokemonName = response.data.results[rnd].name
-      console.log(randomPokemonName)
   
       const { data } = await PokeAPIService.getPokemon(randomPokemonName)
       setPokemon(data)
