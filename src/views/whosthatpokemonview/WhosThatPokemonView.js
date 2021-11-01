@@ -25,7 +25,6 @@ export const WhosThatPokemonView = () => {
       const rnd = NumberUtils.getRandomIntFromZeroTo(max)
   
       const randomPokemonName = response.data.results[rnd].name
-      console.log(randomPokemonName)
   
       const { data } = await PokeAPIService.getPokemon(randomPokemonName)
       setPokemon(data)
@@ -53,10 +52,10 @@ export const WhosThatPokemonView = () => {
         {/* While pokemon is being fetched src spinner, otherwise src back facing sprite, if back is missing src front. */}
         <img 
           className={isLoading ? 'secret-pokemon loading' : 'secret-pokemon'}
-          src={isLoading ? 
-             PokeballImg : pokemon?.sprites?.back_default ? 
-                           pokemon?.sprites?.back_default : pokemon?.sprites?.front_default} 
-          alt='pokemon sprite missing' 
+          src={isLoading ?
+                         PokeballImg : pokemon?.sprites?.back_default ?
+                                                                      pokemon?.sprites?.back_default : pokemon?.sprites?.front_default}
+          alt='pokemon sprite missing'
           onClick={() => revealPokemon()} />
       </div>
       <div className='input-answer'>
