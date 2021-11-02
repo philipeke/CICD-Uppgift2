@@ -18,17 +18,21 @@ export const WhosThatPokemonView = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+
     const fetchRandomPokemon = async () => {
-      const response = await PokeAPIService.getAllPokemon()
+      try {
+        const response = await PokeAPIService.getAllPokemon()
+    
+        const max = response.data.count
+        const rnd = NumberUtils.getRandomIntFromZeroTo(max)
+    
+        const randomPokemonName = response.data.results[rnd].name
   
-      const max = response.data.count
-      const rnd = NumberUtils.getRandomIntFromZeroTo(max)
-  
-      const randomPokemonName = response.data.results[rnd].name
-  
-      const { data } = await PokeAPIService.getPokemon(randomPokemonName)
-      setPokemon(data)
-      setIsLoading(false)
+        const { data } = await PokeAPIService.getPokemon(randomPokemonName)
+
+        setPokemon(data)
+        setIsLoading(false)
+      } catch (error) {}
     }
 
     fetchRandomPokemon()
