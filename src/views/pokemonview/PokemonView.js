@@ -9,6 +9,7 @@ import StringUtils from './../../utils/StringUtils'
 
 import WhosThatPokemonImg from '../../shared/resources/images/whos-that-pokemon.bmp'
 import LoadingImg from '../../shared/resources/images/pokeball.png'
+import { SoundAnswer } from '../../components/soundAnswer/SoundAnswer'
 
 export const PokemonView = () => {
   const language = 'en'
@@ -80,10 +81,7 @@ export const PokemonView = () => {
     if (!location.state.answer)
       return undefined
     else
-      if (isCorrectAnswer)
-        return <h1 className='answer-correct'>✔</h1>
-      else
-        return <h1 className='answer-not-correct'>✖</h1>
+    return <SoundAnswer isCorrectAnswer={isCorrectAnswer}/>
   }
 
   const displayPokemon = () => {

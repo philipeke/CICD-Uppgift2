@@ -12,11 +12,11 @@ export const ThemeSwitch = () => {
 		element.classList.toggle("dark-mode")
 		if(theme === themeEnum.LIGHT){
 			setTheme(themeEnum.DARK)
-			setButtonText (themeEnum.LIGHT)
+			setButtonText (themeEnum.DARK)
 		}
 		else{
 			setTheme(themeEnum.LIGHT)
-			setButtonText(themeEnum.DARK)
+			setButtonText(themeEnum.LIGHT)
 		}
 	}
 
