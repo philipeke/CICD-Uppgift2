@@ -1,0 +1,7 @@
+h1.answer-correct {
+    color: var(--score-correct-font-color);
+  }
+  
+  h1.answer-not-correct {
+    color: var(--score-incorrect-font-color);
+  }

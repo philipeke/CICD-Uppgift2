@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import useSound from 'use-sound'
 import PikachuSound from '../../shared/resources/sounds/pikachu.mp3'
 import Notification from '../../shared/resources/sounds/notification.wav'
+import './SoundAnswer.css'
 
 export const SoundAnswer = ({ isCorrectAnswer }) => {
     const [playCorrect] = useSound(PikachuSound, {});
