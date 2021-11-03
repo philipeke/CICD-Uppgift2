@@ -21,14 +21,6 @@ img.loading {
   width: 96px;
 }
 
-h1.answer-correct {
-  color: var(--score-correct-font-color);
-}
-
-h1.answer-not-correct {
-  color: var(--score-incorrect-font-color);
-}
-
 h4.pokemon-ability-effect {
   max-width: 512px;
   background-color: rgba(255, 255, 255, 0.1);
