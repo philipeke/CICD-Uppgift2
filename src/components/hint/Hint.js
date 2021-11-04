@@ -1,23 +1,30 @@
 import React from 'react'
-import {useState, useContext} from 'react'
+import { useState, useContext } from 'react'
 import { PokemonContext } from '../../shared/provider/PokemonProvider'
 
 export const Hint = () => {
-    const [hintText, setHintText] = useState()
+    const [hintText, setHintText] = useState(null)
     const [pokemon] = useContext(PokemonContext)
-    const showHint = () => {setHintText("null")} 
+
+    const showHint = () => { 
+        setHintText(
+            "The first letter of the pokemon is: " +
+            firstLetterOfPokenomName().toUpperCase())
+    }
+
     const firstLetterOfPokenomName = () => {
-        const pokemonName = pokemon?.name
-        if(pokemonName !== null)
-        {
-            return pokemonName(0)
+
+        if (pokemon !== null) {
+            return pokemon?.name[0]
         }
+
         return null
     }
+
     return (
         <div>
-            <p>{firstLetterOfPokenomName()}</p>
-            <button className= "input" onClick={() => showHint()}> Hint</button>
+            <p>{hintText}</p>
+            <button className="input" onClick={() => showHint()}> Hint</button>
         </div>
     )
 }
