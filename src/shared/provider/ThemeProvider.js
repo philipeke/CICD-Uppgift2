@@ -4,7 +4,7 @@ import themeEnum from '../resources/ThemeEnum'
 export const ThemeContext = createContext()
 
 export const ThemeProvider = (props) => {
-	const [theme, setTheme] = useState(themeEnum.LIGHT)
+	const [theme, setTheme] = useState(themeEnum.DARK)
 
 	return(
 		<ThemeContext.Provider value={{
