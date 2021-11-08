@@ -8,27 +8,32 @@ import { ScoreBoard } from '../../components/scoreboard/ScoreBoard'
 import WhosThatPokemonImg from '../../shared/resources/images/whos-that-pokemon.bmp'
 import PokeballImg from '../../shared/resources/images/pokeball.png'
 import NumberUtils from '../../utils/NumberUtils'
-
-import {ThemeSwitch} from '../../components/themeSwitch/ThemeSwitch'
+import { ThemeSwitch } from '../../components/themeSwitch/ThemeSwitch'
+import { ScoreContext } from '../../shared/provider/ScoreProvider'
 
 export const WhosThatPokemonView = () => {
   const history = useHistory()
   const [pokemon, setPokemon] = useContext(PokemonContext)
   const [answer, setAnswer] = useState('')
   const [isLoading, setIsLoading] = useState(true)
+  const { revealed:[revealed] } = useContext(ScoreContext)
 
   useEffect(() => {
+
     const fetchRandomPokemon = async () => {
-      const response = await PokeAPIService.getAllPokemon()
+      try {
+        const response = await PokeAPIService.getAllPokemon()
+    
+        const max = response.data.count
+        const rnd = NumberUtils.getRandomIntFromZeroTo(max)
+    
+        const randomPokemonName = response.data.results[rnd].name
   
-      const max = response.data.count
-      const rnd = NumberUtils.getRandomIntFromZeroTo(max)
-  
-      const randomPokemonName = response.data.results[rnd].name
-  
-      const { data } = await PokeAPIService.getPokemon(randomPokemonName)
-      setPokemon(data)
-      setIsLoading(false)
+        const { data } = await PokeAPIService.getPokemon(randomPokemonName)
+
+        setPokemon(data)
+        setIsLoading(false)
+      } catch (error) {}
     }
 
     fetchRandomPokemon()
@@ -58,6 +63,7 @@ export const WhosThatPokemonView = () => {
           alt='pokemon sprite missing'
           onClick={() => revealPokemon()} />
       </div>
+
       <div className='input-answer'>
         <form onSubmit={() => revealPokemon()}>
           <h5>WHO&apos;S THAT POKEMON?</h5>
@@ -71,7 +77,7 @@ export const WhosThatPokemonView = () => {
             value='Reveal'/>
         </form>
       </div>
-      <ScoreBoard />
+      {revealed > 0 ? <ScoreBoard /> : null}
     </div>
   )
 }

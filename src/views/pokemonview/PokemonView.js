@@ -9,6 +9,7 @@ import StringUtils from './../../utils/StringUtils'
 
 import WhosThatPokemonImg from '../../shared/resources/images/whos-that-pokemon.bmp'
 import LoadingImg from '../../shared/resources/images/pokeball.png'
+import { SoundAnswer } from '../../components/soundAnswer/SoundAnswer'
 
 export const PokemonView = () => {
   const language = 'en'
@@ -60,9 +61,10 @@ export const PokemonView = () => {
   }
 
   const updateScore = () => {
-    if (!location.state.answer)
-      setRevealed(revealed + 1)
-    else
+
+    // When a guess is attempted, score correct or incorrect.
+    if (location.state.answer)
+    {
       if (location.state.answer === pokemon?.name)
       {
         setCorrect(correct + 1)
@@ -73,6 +75,10 @@ export const PokemonView = () => {
         setIncorrect(incorrect + 1)
         setStreak(0)
       }
+    }
+
+    // Always increment revealed.
+    setRevealed(revealed + 1)
   }
 
   // Displays whether the answer was correct or not. Displays nothing if answer was not attempted. 
@@ -80,10 +86,7 @@ export const PokemonView = () => {
     if (!location.state.answer)
       return undefined
     else
-      if (isCorrectAnswer)
-        return <h1 className='answer-correct'>✔</h1>
-      else
-        return <h1 className='answer-not-correct'>✖</h1>
+    return <SoundAnswer isCorrectAnswer={isCorrectAnswer}/>
   }
 
   const displayPokemon = () => {
