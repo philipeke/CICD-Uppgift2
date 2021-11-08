@@ -5,3 +5,12 @@
 	cursor: pointer;
 	z-index: 11;
 }
+
+.theme-button-two{
+	top: 60px;
+	right: 10px;
+	position: fixed;
+	cursor: pointer;
+	z-index: 11;
+}
+

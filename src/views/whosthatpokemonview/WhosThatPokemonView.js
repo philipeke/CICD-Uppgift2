@@ -8,7 +8,6 @@ import { ScoreBoard } from '../../components/scoreboard/ScoreBoard'
 import WhosThatPokemonImg from '../../shared/resources/images/whos-that-pokemon.bmp'
 import PokeballImg from '../../shared/resources/images/pokeball.png'
 import NumberUtils from '../../utils/NumberUtils'
-
 import {ThemeSwitch} from '../../components/themeSwitch/ThemeSwitch'
 
 export const WhosThatPokemonView = () => {
