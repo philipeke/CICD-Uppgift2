@@ -10,7 +10,6 @@ import PokeballImg from '../../shared/resources/images/pokeball.png'
 import NumberUtils from '../../utils/NumberUtils'
 import { ThemeSwitch } from '../../components/themeSwitch/ThemeSwitch'
 import { ScoreContext } from '../../shared/provider/ScoreProvider'
-import { Hint } from '../../components/hint/Hint'
 
 export const WhosThatPokemonView = () => {
   const history = useHistory()
