@@ -20,7 +20,7 @@ export const ThemeSwitch = () => {
 		}
 	}
 
-	const switchThemeTwo = () => {
+	/*const switchThemeTwo = () => {
 		var element = document.body;
 		element.classList.toggle("midnight-mode")
 		if(theme == themeEnum.LIGHT || theme == themeEnum.DARK){
@@ -30,12 +30,11 @@ export const ThemeSwitch = () => {
 			setTheme(themeEnum.LIGHT)
 		}
 
-	}
+	}*/
 
 	return (
 		<div>
 		<button className= "theme-button input" onClick={() => switchTheme()}>{buttonText} Theme</button>
-		<button className= "theme-button-two input" onClick={() => switchThemeTwo()}>Midnight Theme</button>
 		</div>
 	)
 }
