@@ -8,6 +8,7 @@ import { ScoreBoard } from '../../components/scoreboard/ScoreBoard'
 import WhosThatPokemonImg from '../../shared/resources/images/whos-that-pokemon.bmp'
 import PokeballImg from '../../shared/resources/images/pokeball.png'
 import NumberUtils from '../../utils/NumberUtils'
+import { Hint } from '../../components/hint/Hint'
 
 import {ThemeSwitch} from '../../components/themeSwitch/ThemeSwitch'
 
@@ -62,6 +63,7 @@ export const WhosThatPokemonView = () => {
           alt='pokemon sprite missing'
           onClick={() => revealPokemon()} />
       </div>
+
       <div className='input-answer'>
         <form onSubmit={() => revealPokemon()}>
           <h5>WHO&apos;S THAT POKEMON?</h5>
@@ -75,6 +77,7 @@ export const WhosThatPokemonView = () => {
             value='Reveal'/>
         </form>
       </div>
+      <Hint />
       <ScoreBoard />
     </div>
   )
