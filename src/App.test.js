@@ -16,12 +16,6 @@ test('Reveal Button', () => {
   expect(revealSubmit).toBeInTheDocument();
 });
 
-test('Score Streak', () => {
-  render(<App />);
-  const scoreStreak = screen.getByText(/Streak/);
-  expect(scoreStreak).toBeInTheDocument();
-});
-
 test('Theme Button', () => {
   render(<App />);
   const themeButton = screen.getByText(/ Theme/);
