@@ -61,9 +61,10 @@ export const PokemonView = () => {
   }
 
   const updateScore = () => {
-    if (!location.state.answer)
-      setRevealed(revealed + 1)
-    else
+
+    // When a guess is attempted, score correct or incorrect.
+    if (location.state.answer)
+    {
       if (location.state.answer === pokemon?.name)
       {
         setCorrect(correct + 1)
@@ -74,6 +75,10 @@ export const PokemonView = () => {
         setIncorrect(incorrect + 1)
         setStreak(0)
       }
+    }
+
+    // Always increment revealed.
+    setRevealed(revealed + 1)
   }
 
   // Displays whether the answer was correct or not. Displays nothing if answer was not attempted. 
