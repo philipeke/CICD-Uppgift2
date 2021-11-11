@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { ScoreBoard } from "./components/scoreboard/ScoreBoard"
+import { ScoreProvider } from "./shared/provider/ScoreProvider"
 
 test('WHO\'S THAT POKEMON?', () => {
   render(<App />);
@@ -22,3 +24,21 @@ test('Theme Button', () => {
   expect(themeButton).toBeInstanceOf(HTMLButtonElement);
   expect(themeButton).toBeInTheDocument();
 });
+
+test('score board to have all headings; correct, incorrect, revealed, and streak', () => {
+
+	render(
+		<ScoreProvider> 
+			<ScoreBoard />
+		</ScoreProvider>)
+
+	const correctHeading = screen.getByRole('heading', { name: 'Correct:' })
+	const incorrectHeading = screen.getByRole('heading', { name: 'Incorrect:' })
+	const revealedHeading = screen.getByRole('heading', { name: 'Revealed:' })
+	const streakHeading = screen.getByRole('heading', { name: 'Streak:' })
+	
+	expect(correctHeading).toBeInTheDocument()
+	expect(incorrectHeading).toBeInTheDocument()
+	expect(revealedHeading).toBeInTheDocument()
+	expect(streakHeading).toBeInTheDocument()
+})
