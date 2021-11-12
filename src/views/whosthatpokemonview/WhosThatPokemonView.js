@@ -47,7 +47,6 @@ export const WhosThatPokemonView = () => {
 
   return (
     <div className='whos-that-pokemon-container'>
-      {/* TODO countdown timer before skip answer and view pokemon? */}
       <div className='secret-pokemon'>
         <ThemeSwitch/>
         <img 
