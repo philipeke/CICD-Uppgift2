@@ -1,9 +1,9 @@
 name: Node.js CI
 
 on:
-  push:
+  pull_request:
     branches: [ dev ]
-    
+  
 jobs:
   build:
 
@@ -23,20 +23,3 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    
-  production: 
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: Deployment
-      url: https://vadheterpokemonen.netlify.app
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v2
-      - name: pull-request
-        uses: repo-sync/pull-request@v2
-        with:
-          destination_branch: "master"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_label: "feature, automated pr"
-          pr_title: "master"
