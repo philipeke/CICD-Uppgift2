@@ -4,7 +4,6 @@ const getRandomIntFromZeroTo = (max) => {
   return Math.round(Math.random() * (max - min) + min)
 }
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default {
+export {
   getRandomIntFromZeroTo,
 }

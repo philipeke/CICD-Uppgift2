@@ -2,10 +2,10 @@ import './PokemonView.css'
 import { useEffect, useState, useContext } from 'react'
 import { PokemonContext } from '../../shared/provider/PokemonProvider'
 import { useHistory, useLocation } from "react-router-dom";
-import RoutingPaths from '../../routes/RoutingPaths'
+import { whosThatPokemonView } from '../../routes/RoutingPaths'
 import PokeAPIService from '../../shared/api/service/PokeAPIService'
 import { ScoreContext } from './../../shared/provider/ScoreProvider'
-import StringUtils from './../../utils/StringUtils'
+import { capitalizeName } from './../../utils/StringUtils'
 
 import WhosThatPokemonImg from '../../shared/resources/images/whos-that-pokemon.bmp'
 import LoadingImg from '../../shared/resources/images/pokeball.png'
@@ -28,7 +28,7 @@ export const PokemonView = () => {
 
   useEffect(() => {
     if (!pokemon) {
-      history.push(RoutingPaths.whosThatPokemonView)
+      history.push(whosThatPokemonView)
     }
     location.state.answer === pokemon?.name ? setIsCorrectAnswer(true) : setIsCorrectAnswer(false)
     fetchAbilities()
@@ -91,7 +91,7 @@ export const PokemonView = () => {
 
   const displayPokemon = () => {
     return <div>
-      <h1>It's {StringUtils.capitalizeName(pokemon?.name)}!</h1>
+      <h1>It's {capitalizeName(pokemon?.name)}!</h1>
       <img src={pokemon?.sprites?.front_default} alt='pokemon sprite' />
       <h2>Abilities</h2>
       {isLoading ? displayLoading() : displayPokemonAbilities()}
@@ -105,7 +105,7 @@ export const PokemonView = () => {
   const displayPokemonAbilities = () => {
     return pokemonAbilities.map((ability, i) => 
     <div className='pokemon-ability' key={i}>
-      <h3>{StringUtils.capitalizeName(ability.name)}</h3>
+      <h3>{capitalizeName(ability.name)}</h3>
       <h4 className='pokemon-ability-effect'>{ability.effect}</h4>
     </div>
     )
@@ -115,7 +115,7 @@ export const PokemonView = () => {
     <div className='pokemon-container'>
       {displayAnswer()}
       {displayPokemon()}
-      <img className='whos-that-pokemon' src={WhosThatPokemonImg} alt='whos that pokemon?' onClick={() => history.push(RoutingPaths.whosThatPokemonView)} />
+      <img className='whos-that-pokemon' src={WhosThatPokemonImg} alt='whos that pokemon?' onClick={() => history.push(whosThatPokemonView)} />
     </div>
   )
 }
