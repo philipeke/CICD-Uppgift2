@@ -8,15 +8,16 @@ import { ScoreBoard } from '../../components/scoreboard/ScoreBoard'
 import WhosThatPokemonImg from '../../shared/resources/images/whos-that-pokemon.bmp'
 import PokeballImg from '../../shared/resources/images/pokeball.png'
 import NumberUtils from '../../utils/NumberUtils'
+import { ThemeSwitch } from '../../components/themeSwitch/ThemeSwitch'
+import { ScoreContext } from '../../shared/provider/ScoreProvider'
 import { Hint } from '../../components/hint/Hint'
-
-import {ThemeSwitch} from '../../components/themeSwitch/ThemeSwitch'
 
 export const WhosThatPokemonView = () => {
   const history = useHistory()
   const [pokemon, setPokemon] = useContext(PokemonContext)
   const [answer, setAnswer] = useState('')
   const [isLoading, setIsLoading] = useState(true)
+  const { revealed:[revealed] } = useContext(ScoreContext)
 
   useEffect(() => {
 
@@ -46,7 +47,6 @@ export const WhosThatPokemonView = () => {
 
   return (
     <div className='whos-that-pokemon-container'>
-      {/* TODO countdown timer before skip answer and view pokemon? */}
       <div className='secret-pokemon'>
         <ThemeSwitch/>
         <img 
@@ -78,7 +78,7 @@ export const WhosThatPokemonView = () => {
         </form>
       </div>
       <Hint />
-      <ScoreBoard />
+      {revealed > 0 ? <ScoreBoard /> : null}
     </div>
   )
 }
