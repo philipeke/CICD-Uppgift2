@@ -28,3 +28,7 @@ h4.pokemon-ability-effect {
   padding: 4px;
   text-align: left;
 }
+
+img.pokemon-sprite {
+  width: 196px;
+}
