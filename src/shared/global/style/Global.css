@@ -1,6 +1,6 @@
 :root {
-  --main-bg-color: rgb(65, 170, 186);
-  --main-font-color: rgb(207, 235, 231);
+  --main-bg-color: rgb(41, 85, 92);
+  --main-font-color: rgb(225, 231, 230);
   --score-correct-font-color: lightgreen;
   --score-neutral-font-color: lightyellow;
   --score-incorrect-font-color: lightpink;
@@ -18,12 +18,12 @@ body{
 
 .dark-mode{
   background-color: black;
-  color: white;
+  color: rgb(243, 221, 221);
 }
 
 h1 {
   color: rgb(255, 203, 5);
-  font-size: 48px;
+  font-size: 58px;
 }
 
 h2 {
@@ -36,9 +36,9 @@ h3 {
 
 .input{
   border-radius: 2px;
-  box-shadow: 0px 0px 5px var(--main-font-color);
+  box-shadow: 0px 0px 16px var(--main-font-color);
   background-color: var(--main-font-color);
   border: none;
   padding: 12px;
-  margin: 4px;
+  margin: 3px;
 }
