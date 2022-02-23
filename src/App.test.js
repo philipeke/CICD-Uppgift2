@@ -20,7 +20,7 @@ test('Reveal Button', () => {
 
 test('Theme Button', () => {
   render(<App />);
-  const themeButton = screen.getByText(/ Theme/);
+  const themeButton = screen.getByText('Theme');
   expect(themeButton).toBeInstanceOf(HTMLButtonElement);
   expect(themeButton).toBeInTheDocument();
 });
@@ -42,3 +42,10 @@ test('score board to have all headings; correct, incorrect, revealed, and streak
 	expect(revealedHeading).toBeInTheDocument()
 	expect(streakHeading).toBeInTheDocument()
 })
+
+test('Hint Button', () => {
+  render(<App />);
+  const hintButton = screen.getByText('Hint');
+  expect(hintButton).toBeInstanceOf(HTMLButtonElement);
+  expect(hintButton).toBeInTheDocument();
+});
